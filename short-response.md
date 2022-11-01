@@ -75,45 +75,45 @@ _Truthy_ values are values that evaluate to True in a boolean context, and _fals
    ```javascript
    (false && undefined);
    ```
-   false (false is falsy, undefined is falsy, false && false don't check out as true.)
+   *false* (false is falsy, undefined is falsy, false && false don't check out as true.)
 
    ```javascript
    (false || undefined);
    ```
-   undefined (the || operator returns the value to its left when that can be converted to true and will return the value on its right otherwise, in this case, undefined because false and undefined don't return to true)
+   *undefined* (the || operator returns the value to its left when that can be converted to true and will return the value on its right otherwise, in this case, undefined because false and undefined don't return to true)
    ```javascript
    (undefined || false); 
    ```
-   false (the || operator returns the value to its left when that can be converted to true and will return the value on its right otherwise, in this case, false)
+   *false* (the || operator returns the value to its left when that can be converted to true and will return the value on its right otherwise, in this case, false)
    ```javascript
    ((false && undefined) || (false || undefined));
    ```
-   undefined (false && undefined) = false, (false || undefined) = undefined; false || undefined = undefined.
+   *undefined* (false && undefined) = false, (false || undefined) = undefined; false || undefined = undefined.
    ```javascript
    ((false || undefined) || (false && undefined));
    ```
-   false (false || undefined) = undefined, (false && undefined) = false; undefined || false = false.
+   *false* (false || undefined) = undefined, (false && undefined) = false; undefined || false = false.
    ```javascript
    ((false && undefined) && (false || undefined));
    ```
-   false (false && undefined) = false, (false || undefined) = undefined; false && undefined = false.
+   *false* (false && undefined) = false, (false || undefined) = undefined; false && undefined = false.
    ```javascript
    ((false || undefined) && (false && undefined));
    ```
-   undefined (false || undefined) = undefined, (false && undefined) = false; undefined && false = undefined.
+   *undefined* (false || undefined) = undefined, (false && undefined) = false; undefined && false = undefined.
    ```javascript
    ('a' || (false && undefined) || '');
    ```
-   "a" (false && undefined) = false, "a" || false = "a"; "a" || "" = "a".
+   *"a"* (false && undefined) = false, "a" || false = "a"; "a" || "" = "a".
    ```javascript
    ((false && undefined) || 'a' || '');
    ```
-   "a" (false && undefined) = false, false || "a" = "a"; "a" || "" = "a"
+   *"a"* (false && undefined) = false, false || "a" = "a"; "a" || "" = "a"
    ```javascript
    ('a' && (false || undefined) && '');
    ```
-   undefined (false || undefined) = undefined, "a" && undefined = undefined; undefined && "" = undefined
+   *undefined* (false || undefined) = undefined, "a" && undefined = undefined; undefined && "" = undefined
    ```javascript
    ((false || undefined) && 'a' && '');
    ```
-   undefined (false || undefined) = undefined, undefined && "a" = undefined; undefined && "" = undefined
+   *undefined* (false || undefined) = undefined, undefined && "a" = undefined; undefined && "" = undefined
